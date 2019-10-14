@@ -1,14 +1,14 @@
 const Task = require("../models/Task");
 
 exports.listAllTasks = (req, res) => {
-  //Task.find({}, (err, task) => {
-    // if (err) {
-    //   console.log(err);
-    //   res.status(500).send(err);
-    // }
-  //});
-  console.log("in azure");
-  res.send("alls well");
+  Task.find({}, (err, task) => {
+    if (err) {
+      console.log(err);
+      res.status(500).send(err);
+    }
+    res.status(200).json(task);
+    console.log(task);
+  });
 };
 
 exports.createNewTask = (req, res) => {
