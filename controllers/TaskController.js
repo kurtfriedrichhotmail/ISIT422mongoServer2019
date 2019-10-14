@@ -7,6 +7,7 @@ exports.listAllTasks = (req, res) => {
     //   res.status(500).send(err);
     // }
   //});
+  console.log("in azure");
   let task = {mesaage: hello};
   res.send("alls well");
 };
