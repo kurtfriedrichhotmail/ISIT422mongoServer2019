@@ -1,6 +1,7 @@
 const Task = require("../models/Task");
 
 exports.listAllTasks = (req, res) => {
+  console.log(">>>>>>>>>>>>>> IN listAllTasks <<<<<<<<<");
   Task.find({}, (err, task) => {
     if (err) {
       console.log(err);
