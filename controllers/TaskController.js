@@ -8,7 +8,7 @@ exports.listAllTasks = (req, res) => {
     // }
   //});
   let task = {mesaage: hello};
-  res.status(200).json(task);
+  res.send("alls well");
 };
 
 exports.createNewTask = (req, res) => {
