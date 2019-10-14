@@ -2,12 +2,12 @@ const Task = require("../models/Task");
 
 exports.listAllTasks = (req, res) => {
   Task.find({}, (err, task) => {
-    if (err) {
-      console.log(err);
-      res.status(500).send(err);
-    }
+    // if (err) {
+    //   console.log(err);
+    //   res.status(500).send(err);
+    // }
+    task = {mesaage: hello};
     res.status(200).json(task);
-    console.log(task);
   });
 };
 
