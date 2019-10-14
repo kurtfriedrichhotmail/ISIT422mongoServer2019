@@ -8,7 +8,6 @@ exports.listAllTasks = (req, res) => {
     // }
   //});
   console.log("in azure");
-  let task = {mesaage: hello};
   res.send("alls well");
 };
 
