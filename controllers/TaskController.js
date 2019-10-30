@@ -26,7 +26,9 @@ exports.createNewTask = (req, res) => {
   });
 };
 
-exports.readTask = (req, body) => {
+//exports.readTask = (req, body) => {
+exports.readTask = (req, res) => {
+  console.log('task id at server is ' + req.params.taskid);
   Task.findById(req.params.taskid, (err, task) => {
     if (err) {
       res.status(500).send(err);
